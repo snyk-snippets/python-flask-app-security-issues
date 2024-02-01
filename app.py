@@ -29,7 +29,11 @@ def login():
 
     # Vulnerable SQL query
     query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"
-    
+
+    # Secure SQL query using parameterized query
+    #query = "SELECT * FROM users WHERE username = ? AND password = ?"
+    #cursor.execute(query, (username, password))
+
     # Execute the query
     conn = sqlite3.connect('database.db')
     cursor = conn.cursor()
