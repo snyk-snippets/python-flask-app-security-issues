@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XSS Example</title>
+</head>
+<body>
+    <p>User Input: {{ input }}</p>
+
+    <form method="post" action="{{ url_for('change_password') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />  
+        <label for="new_password">New Password:</label>
+        <input type="password" name="new_password" required>
+        <button type="submit">Change Password</button>
+    </form>
+    
+</body>
+</html>

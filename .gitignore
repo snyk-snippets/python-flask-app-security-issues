@@ -1,0 +1,16 @@
+venv/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# If you're using a database
+*.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+
+# OS generated files
+.DS_Store
